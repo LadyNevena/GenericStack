@@ -1,0 +1,26 @@
+/*
+#include "cstack.h"
+
+#define N 5
+
+
+Stack* s;
+
+
+int main()
+{
+
+    test for integers
+
+    int testValue = 100;
+
+    initStack(sizeof(int), N);
+
+    return pop(&testValue);
+
+    releaseStack();
+
+    return 0;
+
+}
+*/

@@ -1,0 +1,12 @@
+all: mainStack.o cstack.o app
+
+cstack.o: libsrc/cstack.c libinc/cstack.h
+	gcc -c libsrc/cstack.c -o libsrc/cstack.o
+
+ar -r lib/libcstack.a libsrc/cstack.o 
+ 
+mainStack.o: src/mainStack.c libinc/cstack.h
+	gcc -c src/mainStack.c -o build/mainStack.o
+
+app: build/mainStack.o libsrc/cstack.o
+	gcc -o build/app build/mainStack.o -L build libsrc/cstack.o --static 

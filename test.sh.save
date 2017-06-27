@@ -1,0 +1,53 @@
+#!/bin/bash
+
+
+declare -a arr=("NOERR" "STACKOVERFLOW" "STACKUNDERFLOW" "MEMLEAK" "INITERR" "DEINITERR" "NOTEMPTY" "SEGFAULT")
+
+
+
+build/./app
+value1=$?
+echo "$(tput setab 7) $(tput setaf 1)Point structure. ${arr[$value1]} $(tput sgr 0)"
+echo "$(tput setab 7) $(tput setaf 1)$(tput sgr 0)"
+valgrind --tool=memcheck build/./app
+echo " "
+
+build/./app2
+value2=$?
+echo "$(tput setaf 2)String.$(tput setab 7) ${arr[$value2]}  $(tput sgr 0)" 
+ec
+valgrind --tool=memcheck build/./app2
+echo " "
+
+build/./app3
+value3=$?
+echo "$(tput setaf 3)Integer.$(tput setab 7) ${arr[$value3]}  $(tput sgr 0)" 
+echo "$(tput setab 7) $(tput setaf 1)$(tput sgr 0)"
+valgrind --tool=memcheck build/./app3
+echo " "
+
+
+build/./app4
+value4=$?
+echo "$(tput setaf 4)Integer.$(tput setab 7) ${arr[$value4]} $(tput sgr 0)" 
+echo "$(tput setab 7) $(tput setaf 1)$(tput sgr 0)"
+valgrind --tool=memcheck build/./app4
+echo " "
+
+build/./app5
+value5=$?
+echo "$(tput setaf 5)$(tput setab 7) ${arr[$value5]} $(tput sgr 0)" 
+echo "$(tput setab 7) $(tput setaf 1)$(tput sgr 0)"
+valgrind --tool=memcheck build/./app5
+echo " "
+
+
+build/./app6
+value6=$?
+echo "$(tput setaf 6)Integer.$(tput setab 7) ${arr[$value6]} $(tput sgr 0)" 
+echo "$(tput setab 7) $(tput setaf 1)$(tput sgr 0)"
+valgrind --tool=memcheck build/./app6
+echo " "
+
+
+

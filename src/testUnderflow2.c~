@@ -1,0 +1,38 @@
+
+#include "cstack.h"
+
+#define N 5
+
+
+Stack* s;
+
+
+int main()
+{
+
+
+    * push 5 integers
+    * clear the stack
+    * try to pop value
+    *
+
+    int testValue = 100;
+    int val;
+
+    initStack(sizeof(int), N);
+
+    for(val = 0; val < 5; val++)
+    {
+    	push(&testValue);
+    }
+
+    clear();
+
+    return pop(&testValue);
+
+    releaseStack();
+
+    return 0;
+
+}
+

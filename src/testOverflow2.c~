@@ -1,0 +1,38 @@
+#include "cstack.h"
+
+#define N 5
+
+
+Stack* s;
+
+typedef struct Point
+{
+       int i;
+       int j;
+}Point;
+
+int main()
+{
+    int val;
+
+    test for strings
+     *
+
+    char string1[50]="drink";
+    char string2[5] = "beer";
+
+    initStack(sizeof(char), N);
+
+    for(val = 0; val < 5; val++)
+    {
+    	strcat(string1, "Beer");
+    	push(string1);
+    }
+    return push(string2);
+    releaseStack();
+
+    return 0;
+
+}
+
+
